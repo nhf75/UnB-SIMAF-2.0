@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../../Transcribe"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.cp": "cpp",
+			"*.inc": "cpp"
+		}
+	}
+}

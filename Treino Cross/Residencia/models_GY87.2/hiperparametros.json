@@ -1,0 +1,15 @@
+{
+    "timesteps": 80,
+    "wights": [
+        1.0,
+        1.0,
+        1.0
+    ],
+    "neuronios": 300,
+    "dropout": 0.2,
+    "ativacao": "tanh",
+    "learning_rate": 0.0019702991167906115,
+    "epocas": 50,
+    "batch": 120,
+    "paciencia": 10
+}

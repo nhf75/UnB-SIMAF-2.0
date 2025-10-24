@@ -1,0 +1,50 @@
+Iniciando avaliação dos modelos...
+
+=== Avaliando Split 1 ===
+Modelo carregado: models_GY87/lstm_split_1.keras
+Dados de teste - X_test shape: (197608, 80, 3), y_test shape: (197608, 3)
+Predições concluídas - shape: (197608, 3)
+Split 1 - MSE Total: 0.022297, R² Total: 0.337427
+Split 1 - MSE X: 0.038532, R² X: 0.274691
+Split 1 - MSE Y: 0.024155, R² Y: -0.006473
+Split 1 - MSE Z: 0.004205, R² Z: 0.744064
+
+=== Avaliando Split 2 ===
+Modelo carregado: models_GY87/lstm_split_2.keras
+Dados de teste - X_test shape: (197608, 80, 3), y_test shape: (197608, 3)
+Predições concluídas - shape: (197608, 3)
+Split 2 - MSE Total: 0.029418, R² Total: 0.063034
+Split 2 - MSE X: 0.049766, R² X: 0.052749
+Split 2 - MSE Y: 0.033148, R² Y: -0.539828
+Split 2 - MSE Z: 0.005341, R² Z: 0.676181
+
+=== Avaliando Split 3 ===
+Modelo carregado: models_GY87/lstm_split_3.keras
+Dados de teste - X_test shape: (197608, 80, 3), y_test shape: (197608, 3)
+Predições concluídas - shape: (197608, 3)
+Split 3 - MSE Total: 0.020789, R² Total: 0.340420
+Split 3 - MSE X: 0.037233, R² X: 0.288298
+Split 3 - MSE Y: 0.021363, R² Y: 0.003627
+Split 3 - MSE Z: 0.003773, R² Z: 0.729336
+
+=== Avaliando Split 4 ===
+Modelo carregado: models_GY87/lstm_split_4.keras
+Dados de teste - X_test shape: (197608, 80, 3), y_test shape: (197608, 3)
+Predições concluídas - shape: (197608, 3)
+Split 4 - MSE Total: 0.020342, R² Total: 0.359619
+Split 4 - MSE X: 0.036640, R² X: 0.301193
+Split 4 - MSE Y: 0.020704, R² Y: 0.035832
+Split 4 - MSE Z: 0.003682, R² Z: 0.741833
+
+Resultados salvos em models_GY87/evaluation_results.csv
+
+=== RESUMO DOS RESULTADOS ===
+Médias das métricas:
+mse_total: 0.023212 ± 0.004221
+r2_total: 0.275125 ± 0.141736
+mse_x: 0.040543 ± 0.006200
+r2_x: 0.229233 ± 0.118152
+mse_y: 0.024842 ± 0.005736
+r2_y: -0.126711 ± 0.276002
+mse_z: 0.004250 ± 0.000762
+r2_z: 0.722854 ± 0.031783

@@ -1,0 +1,16 @@
+{
+    "Splits": 4,
+    "timesteps": 80,
+    "wights": [
+        1.0,
+        1.0,
+        1.0
+    ],
+    "neuronios": 350,
+    "dropout": 0.14512369139123038,
+    "ativacao": "tanh",
+    "learning_rate": 0.0019702991167906115,
+    "epocas": 50,
+    "batch": 600,
+    "paciencia": 10
+}
