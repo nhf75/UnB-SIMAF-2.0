@@ -64,7 +64,7 @@ def send_to_unity(data, counter):
     except (socket.timeout, ConnectionRefusedError, ValueError) as e:
         print(f"Error sending data: {e}")
 
-def run_animation_lstm(originalData):
+def run_animation_lstm(originalData, lstm_q):  # Adicione lstm_q como parâmetro
     # Carrega os modelos disponíveis
     carregar_modelos()
     # Carrega o scaler
@@ -225,6 +225,9 @@ def run_animation_lstm(originalData):
             yLSTM_Data.append(corrected_values[1])
             zLSTM_Data.append(corrected_values[2])
 
+            # **ADICIONE ESTA LINHA: Envia os valores corrigidos para a fila**
+            lstm_q.put((corrected_values[0], corrected_values[1], corrected_values[2]))
+
             if len(xLSTM_Data) > time_period[0]:
                 xLSTM_Data = xLSTM_Data[-time_period[0]:]
                 yLSTM_Data = yLSTM_Data[-time_period[0]:]
@@ -235,6 +238,10 @@ def run_animation_lstm(originalData):
             xLSTM_Data.append(x_val)
             yLSTM_Data.append(y_val)
             zLSTM_Data.append(z_val)
+            
+            # **ADICIONE ESTA LINHA: Envia os valores originais quando não há correção**
+            lstm_q.put((x_val, y_val, z_val))
+            
             if len(xLSTM_Data) > time_period[0]:
                 xLSTM_Data = xLSTM_Data[-time_period[0]:]
                 yLSTM_Data = yLSTM_Data[-time_period[0]:]
